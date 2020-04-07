@@ -1,0 +1,81 @@
+---
+- hosts: localhost
+  connection: local
+  vars:
+    home_dir: /Users/nm
+    git_name: nmlc
+    git_email: public.nmlc@gmail.com
+  tasks:
+    - name: Configure git email
+      git_config:
+        name: user.email
+        scope: global
+        value: "{{ git_email }}"
+    - name: Configure git name
+      git_config:
+        name: user.name
+        scope: global
+        value: "{{ git_name }}"
+    - name: Ensure that the directory exist
+      file:
+        path: "{{ home_dir }}/.config"
+        state: directory
+    - name: nvim symlink
+      file:
+        src: "{{ home_dir }}/dots/nvim"
+        dest: "{{ home_dir }}/.config/nvim"
+        state: link
+    - name: Instal Tmux plugin manager
+      git:
+        repo: "https://github.com/tmux-plugins/tpm"
+        dest: "{{ home_dir }}/.tmux/plugins/tpm"
+        update: no
+    - name: tmux.conf symlink
+      file:
+        src: "{{ home_dir }}/dots/tmux.conf"
+        dest: "{{ home_dir }}/.tmux.conf"
+        state: link
+    - name: orgmode symlink
+      file:
+        src: "{{ home_dir }}/dots/orgmode"
+        dest: "{{ home_dir }}/.orgmode"
+        state: link
+    - name: ensure .bashrc exist
+      file: 
+        path: "{{ home_dir }}/.bashrc"
+        state: touch
+    - name: add .orgmode to path
+      lineinfile:
+        path: "{{ home_dir }}/.bashrc"
+        state: present
+        regexp: "^export PATH=$PATH:{{ home_dir }}/.orgmode"
+        line: "export PATH=$PATH:{{ home_dir }}/.orgmode"
+    - name: magit symlink
+      file:
+        src: "{{ home_dir }}/dots/magit"
+        dest: "{{ home_dir }}/.magit"
+        state: link
+    - name: add .magit to path
+      lineinfile:
+        path: "{{ home_dir }}/.bashrc"
+        state: present
+        regexp: "^export PATH=$PATH:{{ home_dir }}/.magit"
+        line: "export PATH=$PATH:{{ home_dir }}/.magit"
+    - name: Add ma alias
+      lineinfile:
+        path: "{{ home_dir }}/.bashrc"
+        state: present
+        regexp: '^alias ma="magit"'
+        line: 'alias ma="magit"'
+    - name: Add ml alias
+      lineinfile:
+        path: "{{ home_dir }}/.bashrc"
+        state: present
+        regexp: '^alias ml="magitd"'
+        line: 'alias ml="magitd"'
+    - name: Add kubectl -> k alias
+      lineinfile:
+        path: "{{ home_dir }}/.bashrc"
+        state: present
+        regexp: '^alias k="kubectl"'
+        line: 'alias k="kubectl"'

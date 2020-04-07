@@ -1,0 +1,5 @@
+venv/
+__pycache__/
+molecule/
+pytest_cache/
+.DS_Store

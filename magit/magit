@@ -1,0 +1,2 @@
+#!/bin/bash
+TERM=xterm emacsclient -t -e "(progn (magit-status) (delete-other-windows))" -s magit
