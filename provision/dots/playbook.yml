@@ -20,9 +20,9 @@
       file:
         path: "{{ home_dir }}/.config"
         state: directory
-    - name: nvim symlink
+    - name: vim symlink
       file:
-        src: "{{ home_dir }}/dots/nvim"
+        src: "{{ home_dir }}/dots/vim"
         dest: "{{ home_dir }}/.config/nvim"
         state: link
     - name: Instal Tmux plugin manager
