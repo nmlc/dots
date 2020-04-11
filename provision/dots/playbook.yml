@@ -2,9 +2,11 @@
 - hosts: localhost
   connection: local
   vars:
-    home_dir: /Users/nm
     git_name: nmlc
     git_email: public.nmlc@gmail.com
+  vars_prompt:
+    - name: home_dir
+      private: false
   tasks:
     - name: Configure git email
       git_config:
