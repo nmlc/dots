@@ -56024,7 +56024,7 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>573 -579 799 448 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3 0 1274 1057 0 0 1920 1057 </string>
+	<string>643 0 1274 1057 0 0 1920 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -56680,20 +56680,20 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{253, -900}, {1440, 900}}</string>
+		<string>{{0, 0}, {1920, 1080}}</string>
 		<key>topLeft</key>
-		<string>{561, -182}</string>
+		<string>{1138, 932}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>43FB20A3-5D30-4418-9979-AD652497F14A</string>
 	<key>NoSyncLastTipTime</key>
-	<real>607870392.02424002</real>
+	<real>608262336.307096</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>7</integer>
+	<integer>11</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>605948158.12158096</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -57426,19 +57426,23 @@
 		<string>0002</string>
 		<string>0018</string>
 		<string>0007</string>
+		<string>0022</string>
 		<string>0011</string>
 		<string>0000</string>
 		<string>0016</string>
 		<string>0005</string>
+		<string>0020</string>
 		<string>0014</string>
 		<string>0003</string>
+		<string>0019</string>
 		<string>0008</string>
 		<string>0012</string>
 		<string>0001</string>
 		<string>000</string>
 		<string>0017</string>
 		<string>0006</string>
-		<string>0019</string>
+		<string>0021</string>
+		<string>0023</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
@@ -57479,6 +57483,8 @@
 	<string>/Users/nm/dots/osx/iterm2</string>
 	<key>PreserveWindowSizeWhenTabBarVisibilityChanges</key>
 	<true/>
+	<key>QuitWhenAllWindowsClosed</key>
+	<false/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -57488,7 +57494,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-04-06T09:48:33Z</date>
+	<date>2020-04-10T09:58:53Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
