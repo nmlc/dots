@@ -14,6 +14,8 @@
 	<integer>1</integer>
 	<key>AppleWindowTabbingMode</key>
 	<string>manual</string>
+	<key>CopyLastNewline</key>
+	<false/>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>3024 Day</key>
@@ -56682,14 +56684,14 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1920, 1080}}</string>
 		<key>topLeft</key>
-		<string>{1138, 932}</string>
+		<string>{1138, 933}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>43FB20A3-5D30-4418-9979-AD652497F14A</string>
 	<key>NoSyncLastTipTime</key>
-	<real>608262336.307096</real>
+	<real>608354591.39519799</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>11</integer>
+	<integer>12</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -57416,6 +57418,8 @@
 	</dict>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>605522031.19028902</real>
+	<key>NoSyncTipsDisabled</key>
+	<true/>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
 		<string>0010</string>
@@ -57436,13 +57440,14 @@
 		<string>0003</string>
 		<string>0019</string>
 		<string>0008</string>
+		<string>0023</string>
 		<string>0012</string>
 		<string>0001</string>
 		<string>000</string>
 		<string>0017</string>
 		<string>0006</string>
 		<string>0021</string>
-		<string>0023</string>
+		<string>0024</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
@@ -57494,7 +57499,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-04-10T09:58:53Z</date>
+	<date>2020-04-24T10:37:00Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
