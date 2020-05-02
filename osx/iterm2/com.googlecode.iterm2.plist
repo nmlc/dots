@@ -56026,7 +56026,7 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>573 -579 799 448 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>643 0 1274 1057 0 0 1920 1057 </string>
+	<string>963 0 954 1057 0 0 1920 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -56691,7 +56691,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>608354591.39519799</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>12</integer>
+	<integer>16</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -57499,7 +57499,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-04-24T10:37:00Z</date>
+	<date>2020-05-01T11:39:13Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
