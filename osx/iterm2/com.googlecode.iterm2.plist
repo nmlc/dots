@@ -56026,7 +56026,7 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>560 456 799 448 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1283 0 634 1057 0 0 1920 1057 </string>
+	<string>0 0 1920 1057 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>247 107 650 404 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -56695,7 +56695,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>608354591.39519799</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>21</integer>
+	<integer>23</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -57503,7 +57503,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-05-08T11:39:22Z</date>
+	<date>2020-05-15T11:39:30Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -57530,6 +57530,8 @@
 	<false/>
 	<key>WindowNumber</key>
 	<true/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>iTerm Version</key>
 	<string>3.3.9</string>
 </dict>
