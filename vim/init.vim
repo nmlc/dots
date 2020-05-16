@@ -23,16 +23,9 @@ Plug 'google/vim-jsonnet'
 
 call plug#end()
 
-let g:NERDTreeMapJumpPrevSibling=""
-let g:NERDTreeMapJumpNextSibling=""
-
-highlight NERDTreeOpenable guifg=white
-highlight NERDTreeClosable guifg=white
-highlight NERDTreeUp guifg=white
-highlight NERDTreeDir guifg=magenta ctermfg=magenta
-
-let g:ctrlsf_default_view_mode = 'compact'
-let g:ctrlsf_regex_pattern = 1
+source $HOME/.config/nvim/plug-config/nerdtree.vim
+source $HOME/.config/nvim/plug-config/ctrlsf.vim
+source $HOME/.config/nvim/plug-config/gitgutter.vim
 
 function! RipgrepFzf(query, fullscreen)
   let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case %s || true'
@@ -60,38 +53,16 @@ set signcolumn=yes
 :au BufLeave,FocusLost * :wa
 autocmd BufLeave,FocusLost * silent! wall
 
-let g:ctrlsf_auto_focus = {
-  \ "at": "done"
-  \ }
-let g:ctrlsf_auto_close = {
-    \ "normal" : 1,
-    \ "compact": 1
-    \}
-nnoremap <space>fs :CtrlSF<Cr>
-nnoremap <space>fn :CtrlSF 
-nnoremap <space>ff :CtrlSFToggle<Cr>
-nmap <space>fp <Plug>CtrlSFPwordPath
-let g:ctrlsf_ackprg = 'rg'
 
 nnoremap <space>fi :RG!<Cr>
 
 nnoremap <space>gl :Gclog! -10 --pretty=format:"%ad %an %s" --date=short -- %<Cr>
 nnoremap <space>gb :Gblame --date=short<Cr>
 
+nnoremap Y v$y 
+nnoremap vv v$
 
 let g:vista_default_executive = 'coc'
-
-nmap ,n :NERDTreeFind<CR>
-nmap ,m :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
-
-" nnoremap qj :GitGutterNextHunk<Cr>
-" nnoremap qk :GitGutterPrevHunk<Cr>
-nnoremap qp :GitGutterPreview<Cr>
-" nnoremap qu :GitGutterUndoHunk<Cr>
-" nnoremap qs :GitGutterStageHunk<Cr>
-" nnoremap qf :GitGutterFold<Cr>
-
 
 nnoremap <C-p> :Files<Cr>
 nnoremap <C-s> :History<Cr>
