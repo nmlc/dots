@@ -51,6 +51,7 @@ set splitbelow
 set splitright
 set hidden
 set signcolumn=yes
+set clipboard=unnamed
 
 :au BufLeave,FocusLost * :wa
 autocmd BufLeave,FocusLost * silent! wall
@@ -63,6 +64,11 @@ nnoremap <space>gb :Gblame --date=short<Cr>
 
 nnoremap Y v$y 
 nnoremap vv v$
+nnoremap p ]p
+nnoremap gp `[v`]
+nnoremap <space>, `[v`]<
+nnoremap <space>. `[v`]>
+nnoremap <space>p :CocCommand prettier.formatFile<Cr>
 
 let g:vista_default_executive = 'coc'
 
