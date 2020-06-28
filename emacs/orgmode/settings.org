@@ -218,6 +218,17 @@ as the default task."
 (use-package evil :ensure t)
 (evil-mode t)
 (add-hook 'org-capture-mode-hook 'evil-insert-state)
+
+(use-package evil-org
+  :ensure t
+  :after org
+  :config
+  (add-hook 'org-mode-hook 'evil-org-mode)
+  (add-hook 'evil-org-mode-hook
+            (lambda ()
+              (evil-org-set-key-theme)))
+  (require 'evil-org-agenda)
+  (evil-org-agenda-set-keys))
 #+END_SRC
 * ido
 #+BEGIN_SRC emacs-lisp

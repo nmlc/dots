@@ -42,42 +42,23 @@
         src: "{{ home_dir }}/dots/emacs/orgmode"
         dest: "{{ home_dir }}/.orgmode"
         state: link
+    - name: base_profile symlink
+      file:
+        src: "{{ home_dir }}/dots/bash_profile"
+        dest: "{{ home_dir }}/.base_profile"
+        state: link
     - name: ensure .bash_profile exist
       file: 
         path: "{{ home_dir }}/.bash_profile"
         state: touch
-    - name: add .orgmode to path
+    - name: source base_profile
       lineinfile:
         path: "{{ home_dir }}/.bash_profile"
         state: present
-        regexp: "^export PATH=$PATH:{{ home_dir }}/.orgmode"
-        line: "export PATH=$PATH:{{ home_dir }}/.orgmode"
+        regexp: "^source ~/.base_profile"
+        line: "source ~/.base_profile"
     - name: magit symlink
       file:
         src: "{{ home_dir }}/dots/emacs/magit"
         dest: "{{ home_dir }}/.magit"
         state: link
-    - name: add .magit to path
-      lineinfile:
-        path: "{{ home_dir }}/.bash_profile"
-        state: present
-        regexp: "^export PATH=$PATH:{{ home_dir }}/.magit"
-        line: "export PATH=$PATH:{{ home_dir }}/.magit"
-    - name: Add ma alias
-      lineinfile:
-        path: "{{ home_dir }}/.bash_profile"
-        state: present
-        regexp: '^alias ma="magit"'
-        line: 'alias ma="magit"'
-    - name: Add ml alias
-      lineinfile:
-        path: "{{ home_dir }}/.bash_profile"
-        state: present
-        regexp: '^alias ml="magitd"'
-        line: 'alias ml="magitd"'
-    - name: Add kubectl -> k alias
-      lineinfile:
-        path: "{{ home_dir }}/.bash_profile"
-        state: present
-        regexp: '^alias k="kubectl"'
-        line: 'alias k="kubectl"'

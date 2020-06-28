@@ -7,6 +7,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
+Plug 'nmlc/vim-rhubarb'
 Plug 'tpope/vim-unimpaired'
 Plug 'fatih/vim-go'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
@@ -51,16 +52,19 @@ set splitbelow
 set splitright
 set hidden
 set signcolumn=yes
-set clipboard=unnamed
+" set clipboard=unnamed
+highlight clear SignColumn
 
 :au BufLeave,FocusLost * :wa
 autocmd BufLeave,FocusLost * silent! wall
 
 
 nnoremap <space>fi :RG!<Cr>
+nnoremap <space>ff :Files<Cr>
 
-nnoremap <space>gl :Gclog! -10 --pretty=format:"%ad %an %s" --date=short -- %<Cr>
+" nnoremap <space>gl :Gclog! -10 --pretty=format:"%ad %an %s" --date=short -- %<Cr>
 nnoremap <space>gb :Gblame --date=short<Cr>
+nnoremap <space>gl '<,'>Gclog<Cr>
 
 nnoremap Y v$y 
 nnoremap vv v$
@@ -68,10 +72,18 @@ nnoremap p ]p
 nnoremap gp `[v`]
 nnoremap <space>, `[v`]<
 nnoremap <space>. `[v`]>
-nnoremap <space>p :CocCommand prettier.formatFile<Cr>
+
+nnoremap <space>pp "0p
+xnoremap <space>pp "0p
+nnoremap <space>ps "*p
+xnoremap <space>ps "*p
+nnoremap <space>ys "*y
+xnoremap <space>ys "*y
+
+nnoremap <space>rb :GBrowse<Cr>
+xnoremap <space>rb :GBrowse<Cr>
 
 let g:vista_default_executive = 'coc'
 
-nnoremap <C-p> :Files<Cr>
 nnoremap <C-s> :History<Cr>
 nnoremap <C-d> :GFiles?<Cr>

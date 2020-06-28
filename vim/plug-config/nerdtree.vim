@@ -1,5 +1,7 @@
-let g:NERDTreeMapJumpPrevSibling=""
-let g:NERDTreeMapJumpNextSibling=""
+let g:NERDTreeMapJumpPrevSibling="K"
+let g:NERDTreeMapJumpNextSibling="J"
+let g:NERDTreeMapJumpLastChild=""
+let g:NERDTreeMapJumpFirstChild=""
 
 highlight NERDTreeOpenable guifg=white
 highlight NERDTreeClosable guifg=white

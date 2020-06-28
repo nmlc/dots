@@ -16,10 +16,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files (quote ("~/org/todo.org")))
+ '(org-agenda-files (quote ("~/org/todo.org" "~/org/job.org")))
  '(package-selected-packages
    (quote
-    (smex ido-vertical-mode ido-completing-read+ evil org-download olivetti org-bullets poet-theme dash exec-path-from-shell use-package))))
+    (evil-org smex ido-vertical-mode ido-completing-read+ evil org-download olivetti org-bullets poet-theme dash exec-path-from-shell use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
