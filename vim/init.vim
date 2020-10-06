@@ -6,9 +6,10 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-fugitive'
+Plug "tpope/vim-fugitive"
 Plug 'nmlc/vim-rhubarb'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-surround'
 Plug 'fatih/vim-go'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'scrooloose/nerdtree'
@@ -22,9 +23,12 @@ Plug 'tpope/vim-commentary'
 Plug 'liuchengxu/vista.vim'
 Plug 'google/vim-jsonnet'
 Plug 'itchyny/lightline.vim'
+Plug 'hashivim/vim-terraform'
 " Plug 'justinmk/vim-sneak'
 
 call plug#end()
+
+let g:terraform_fmt_on_save=1
 
 source $HOME/.config/nvim/plug-config/nerdtree.vim
 source $HOME/.config/nvim/plug-config/ctrlsf.vim
@@ -57,8 +61,7 @@ set signcolumn=yes
 " set clipboard=unnamed
 highlight clear SignColumn
 
-:au BufLeave,FocusLost * :wa
-autocmd BufLeave,FocusLost * silent! wall
+au BufLeave,FocusLost * nested silent! wall
 
 
 nnoremap <space>fi :RG!<Cr>
