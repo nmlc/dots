@@ -67,3 +67,4 @@
         src: "{{ home_dir }}/dots/osx/karabiner"
         dest: "{{ home_dir }}/.config/karabiner"
         state: link
+        force: true
