@@ -1,37 +1,15 @@
-  {
-    "languageserver": {
-      "terraform": {
-          "command": "terraform-ls",
-          "filetypes": [
-              "terraform",
-              "tf"
-          ],
-          "args": ["serve"],
-          "initializationOptions": {},
-          "settings": {}
-      },
-      "golang": {
-        "command": "gopls",
-        "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-        "filetypes": ["go"],
-        "initializationOptions": {
-          "deepCompletion": true,
-          "completeUnimported": true,
-          "hoverKind": "FullDocumentation",
-          "usePlaceholders": false
-        }
-      },
-      "ccls": {
-        "command": "ccls",
-        "filetypes": ["c", "cpp", "objc", "objcpp"],
-        "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
-        "initializationOptions": {
-           "cache": {
-             "directory": "/tmp/ccls"
-           }
-         }
-      }
-    },
-    "git.addGBlameToBufferVar": true
-  }
-  
+{
+  "languageserver": {
+    "terraform": {
+        "command": "terraform-ls",
+        "filetypes": [
+            "terraform",
+            "tf"
+        ],
+        "args": ["serve"],
+        "initializationOptions": {},
+        "settings": {}
+    }
+  },
+  "git.addGBlameToBufferVar": true
+}

@@ -29,9 +29,12 @@
 
 (straight-use-package 'use-package)
 (use-package magit :straight t)
-;(use-package zenburn-theme :straight t :config (load-theme 'zenburn t))
 (use-package evil :straight t)
 (use-package evil-magit :straight t)
+; (use-package base16-theme
+;   :straight t
+;   :config
+;   (load-theme 'base16-papercolor-light t))
 (evil-mode 1)
 (add-hook 'git-commit-mode-hook 'evil-insert-state)
 

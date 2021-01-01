@@ -1,4 +1,5 @@
 let g:lightline = {
+  \ 'colorscheme': 'PaperColor',
   \ 'active': {
   \   'right':[
   \     [ 'lineinfo', 'linecount' ],
@@ -10,6 +11,9 @@ let g:lightline = {
   \   'linecount': 'MyLineCount',
   \ }
 \ }
+
+let g:lightline = { 'colorscheme': 'PaperColor' }
+
 
 function! MyLineCount()
   return line('$')
