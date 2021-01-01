@@ -1,1 +1,3 @@
 emacs --daemon=org --load $HOME/.orgmode/init.el
+emacsclient -c -e '(make-org-frame)' -s org &
+disown

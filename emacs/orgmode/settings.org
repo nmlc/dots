@@ -40,7 +40,7 @@
                (lambda ()
                 (variable-pitch-mode 1)))
 
-(load-theme 'poet-dark-monochrome t)
+(load-theme 'poet-monochrome t)
 
 (use-package org-bullets :ensure t)
 (setq org-bullets-bullet-list
