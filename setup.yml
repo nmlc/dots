@@ -1,0 +1,63 @@
+---
+- hosts: localhost
+  connection: local
+  vars:
+    git_name: nmlc
+    git_email: public.nmlc@gmail.com
+  vars_prompt:
+    - name: home_dir
+      private: false
+  tasks:
+    - name: Configure git email
+      git_config:
+        name: user.email
+        scope: global
+        value: "{{ git_email }}"
+
+    - name: Configure git name
+      git_config:
+        name: user.name
+        scope: global
+        value: "{{ git_name }}"
+
+    - name: Create .config directory
+      file:
+        path: "{{ home_dir }}/.config"
+        state: directory
+
+    - name: Instal Tmux plugin manager
+      git:
+        repo: "https://github.com/tmux-plugins/tpm"
+        dest: "{{ home_dir }}/.tmux/plugins/tpm"
+        update: no
+
+    - name: Ensure .bash_profile exist
+      file: 
+        path: "{{ home_dir }}/.bash_profile"
+        state: touch
+
+    - name: Source .base_profile in .bash_profile
+      lineinfile:
+        path: "{{ home_dir }}/.bash_profile"
+        state: present
+        regexp: "^source ~/.base_profile"
+        line: "source ~/.base_profile"
+
+    - name: Symlinks
+      file:
+        src: "{{ item.src }}"
+        dest: "{{ item.dest }}"
+        state: link
+      with_items:
+        - src: "{{ home_dir }}/dots/vim"
+          dest: "{{ home_dir }}/.config/nvim"
+        - src: "{{ home_dir }}/dots/tmux.conf"
+          dest: "{{ home_dir }}/.tmux.conf"
+        - src: "{{ home_dir }}/dots/emacs/orgmode"
+          dest: "{{ home_dir }}/.orgmode"
+        - src: "{{ home_dir }}/dots/bash_profile"
+          dest: "{{ home_dir }}/.base_profile"
+        - src: "{{ home_dir }}/dots/emacs/magit"
+          dest: "{{ home_dir }}/.magit"
+        - src: "{{ home_dir }}/dots/osx/karabiner"
+          dest: "{{ home_dir }}/.config/karabiner"
